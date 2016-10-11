@@ -21,9 +21,9 @@ with picamera.PiCamera() as camera:
     camera.shutter_speed = 500000 #values in microseconds 0-6000000
     camera.exposure_mode = 'off'
     camera.iso = 100 #values between 0-800 
-    camera.awb_mode='off'
-    camera.awb_gains=(0.56,1.27)
-    camera.resolution = (1920, 1080)
+    camera.awb_mode='off' #For adjust whitle balance .awb_mode must be in 'off'
+    camera.awb_gains=(0.56,1.27)#white balance (value_red, value_blue)
+    camera.resolution = (1920, 1080) #The maximum resolution (3280,2464) not run on raspberry by default it must increment GPU memory  
     #camera.brightness = 20 #Values between 0-100
     camera.capture(stream, format='jpeg')
     
