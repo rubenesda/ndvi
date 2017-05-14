@@ -112,6 +112,7 @@ ret3,th3 = cv2.threshold(blur,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 sumador=0.0 #Acumulate the value of sum of pixel by pixel in the image NDVI.
 cuenta=0.0 #Conut that there is pixel with value higher than 0.1 grow 1 unit.
 
+# Get average of pixel for calculating mean NDVI
 for i in xrange(1, m):
     for j in xrange(1,n):
         if(th3[i,j]>1.0): #Contiditon or level for threshold
